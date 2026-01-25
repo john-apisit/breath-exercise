@@ -14,7 +14,7 @@ const emit = defineEmits<{
 <template>
   <div class="flex flex-wrap gap-3 justify-center">
     <button
-      v-for="(preset, index) in presets"
+      v-for="preset in presets"
       :key="preset.id"
       @click="emit('select', preset)"
       :class="[

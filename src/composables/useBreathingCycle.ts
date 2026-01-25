@@ -80,6 +80,7 @@ export function useBreathingCycle(initialPreset: BreathingPreset) {
   function nextPhase() {
     const nextIndex = (currentPhaseIndex.value + 1) % phaseSequence.value.length
     const nextPhaseData = phaseSequence.value[nextIndex]
+    if (!nextPhaseData) return
     currentPhase.value = nextPhaseData.phase
     phaseTimeRemaining.value = nextPhaseData.duration
     phaseStartTime = Date.now()
