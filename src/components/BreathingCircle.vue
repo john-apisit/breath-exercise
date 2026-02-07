@@ -10,6 +10,20 @@ const props = defineProps<{
 }>()
 
 const circleRef = ref<HTMLElement>()
+
+// Initialize audio for bell sound
+const bellSound = new Audio('/floraphonic-copper-bell-ding-23-215438.mp3')
+bellSound.volume = 0.1
+
+// Function to play bell sound
+const playBellSound = () => {
+  try {
+    bellSound.currentTime = 0 // Reset to start for quick successive plays
+    bellSound.play()
+  } catch (error) {
+    console.warn('Could not play bell sound:', error)
+  }
+}
 const motion = useMotion(circleRef, {
   initial: {
     scale: 1,
@@ -35,6 +49,11 @@ watch(() => props.phase, (newPhase) => {
       }
     })
     return
+  }
+  
+  // Play bell sound when entering a new breathing phase
+  if (newPhase === 'Inhale' || newPhase === 'Exhale' || newPhase === 'Hold') {
+    playBellSound()
   }
   
   // Determine target scale based on phase
