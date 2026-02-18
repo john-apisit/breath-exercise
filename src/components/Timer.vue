@@ -39,7 +39,7 @@ watch(displayTime, (newVal, oldVal) => {
   <div 
     class="text-center space-y-4"
   >
-    <div class="text-white">
+    <!-- <div class="text-white">
       <div 
         ref="timeRef"
         class="text-6xl md:text-7xl font-mono font-light tracking-wider"
@@ -49,7 +49,7 @@ watch(displayTime, (newVal, oldVal) => {
       <div class="text-sm text-white/60 uppercase tracking-widest mt-2">
         seconds remaining
       </div>
-    </div>
+    </div> -->
     
     <div 
       class="text-white/80"

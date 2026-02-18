@@ -15,7 +15,7 @@ const emit = defineEmits<{
     <button
       v-if="!isActive"
       @click="emit('start')"
-      class="px-8 py-4 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-xl font-medium text-lg shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-200"
+      class="px-8 py-4 bg-linear-to-r from-green-400 to-emerald-500 text-white rounded-xl font-medium text-lg shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-200"
       aria-label="Start breathing exercise"
     >
       Start
@@ -24,7 +24,7 @@ const emit = defineEmits<{
     <button
       v-else
       @click="emit('pause')"
-      class="px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-xl font-medium text-lg shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-200"
+      class="px-8 py-4 bg-linear-to-r from-yellow-400 to-orange-500 text-white rounded-xl font-medium text-lg shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-200"
       aria-label="Pause breathing exercise"
     >
       Pause

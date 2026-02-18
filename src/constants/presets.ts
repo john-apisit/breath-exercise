@@ -39,4 +39,4 @@ export const BREATHING_PRESETS: BreathingPreset[] = [
   }
 ]
 
-export const DEFAULT_PRESET = BREATHING_PRESETS[0]
+export const DEFAULT_PRESET = BREATHING_PRESETS[1]

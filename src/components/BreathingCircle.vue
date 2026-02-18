@@ -13,7 +13,7 @@ const circleRef = ref<HTMLElement>()
 
 // Initialize audio for bell sound
 const bellSound = new Audio('/floraphonic-copper-bell-ding-23-215438.mp3')
-bellSound.volume = 0.1
+bellSound.volume = 0.02
 
 // Function to play bell sound
 const playBellSound = () => {
@@ -151,7 +151,7 @@ watch(() => props.phase, (newPhase, oldPhase) => {
   <div class="flex items-center justify-center">
     <div
       ref="circleRef"
-      class="w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 shadow-2xl"
+      class="w-48 h-48 md:w-64 md:h-64 rounded-full bg-linear-to-br from-blue-400 via-purple-400 to-pink-400 shadow-2xl"
     >
       <div class="w-full h-full flex items-center justify-center">
         <span 
